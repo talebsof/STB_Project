@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des spécifications</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+</head>
+<body>
+    <h1>Liste des spécifications</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Entity client</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="stb : ${stbList}">
+                <td th:text="${stb.id}"></td>
+                <td th:text="${stb.title}"></td>
+                <td th:text="${stb.description}"></td>
+                <td th:text="${stb.date}"></td>
+                <td th:text="${stb.client.entity}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

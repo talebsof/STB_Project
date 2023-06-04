@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>STB Details</title>
+</head>
+<body>
+    <h1>STB Details</h1>
+    
+    <table>
+        <tr>
+            <th>ID:</th>
+            <td th:text="${stb.id}"></td>
+        </tr>
+        <tr>
+            <th>Title:</th>
+            <td th:text="${stb.title}"></td>
+        </tr>
+        <tr>
+            <th>Version:</th>
+            <td th:text="${stb.version}"></td>
+        </tr>
+        <tr>
+            <th>Date:</th>
+            <td th:text="${stb.date}"></td>
+        </tr>
+        <tr>
+            <th>Description:</th>
+            <td th:text="${stb.description}"></td>
+        </tr>
+        <tr>
+            <th>Client:</th>
+            <td>
+                <ul>
+                    <li th:each="client : ${stb.client}">
+                        <span th:text="${client.entity}"></span></br>
+                        <ul>
+                    	<li th:if="${client.mailOrTel} != null" th:each="contact : ${client.mailOrTel}">
+                        <span th:text="${contact}"></span>
+                    	</li>
+                    	<li th:unless="${client.mailOrTel} != null">N/A</li>
+                		</ul>
+                        <span th:text="${client.person.lastname}"></span></br>
+                        <span th:text="${client.person.gender}"></span></br>
+                         <span th:text="${client.person.lastname}"></span></br>
+                    </li>
+                </ul>
+            </td>
+            
+        </tr>
+        <tr>
+            <th>Team:</th>
+            <td>
+                <ul>
+                    <li th:each="Team : ${stb.team.member}">
+                        <li th:if="${stb.team.member} != null" th:each="member : ${client.mailOrTel}">
+                        <span th:text="${member.person.lastname}"></span></br>
+                        <span th:text="${member.person.gender}"></span></br>
+                         <span th:text="${member.person.lastname}"></span></br>
+                    	</li>
+                    </li>
+                </ul>
+            </td>
+            
+        </tr>    </table>
+</body>
+</html>

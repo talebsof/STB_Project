@@ -136,15 +136,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		        <plugin>
-			      <groupId>com.clever-cloud</groupId>
-			      <artifactId>clever-cloud-maven-plugin</artifactId>
-			      <configuration>
-				<deployGoals>
-	    				<goal>clever-cloud:deploy</goal>
-	 			</deployGoals>
-			      </configuration>
-		    </plugin>
 		 </plugins>
 	</build>
 

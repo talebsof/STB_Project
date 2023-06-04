@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+</head>
+<body>
+<div class="intro">
+    <h1>STB23 REST HELP</h1>
+    <p>Voici la liste des opérations gérées par notre service REST.</p>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th scope="col">URL</th>
+        <th scope="col">METHODE ATTENDUE</th>
+        <th scope="col">Opération</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">/</th>
+        <td>GET</td>
+        <td>Retourne la page d'accueil avec Affiche la page d’accueil du projet avec des informations générales sur ce dernier</td>
+    </tr>
+
+    <tr>
+        <th scope="row">/help</th>
+        <td>GET</td>
+        <td>Retourne la liste des opérations gérées par le service REST</td>
+    </tr>
+
+    <tr>
+        <th scope="row">/stb23/resume/xml</th>
+        <td>GET</td>
+        <td>Liste résumée des spécifications présentes dans la base.
+            Pour chacune, ne seront affichés que les informations suivantes :</td>
+    </tr>
+
+    <tr>
+        <th scope="row">/stb23/resume</th>
+        <td>GET</td>
+        <td>Mêmes informations que précédemment mais présentées au format d'une page HTML</td>
+    </tr>
+
+
+    <tr>
+        <th scope="row">/stb23/xml/{id}</th>
+        <td>GET</td>
+        <td>Affiche le contenu complet de la spécification dont l’identifiant est {id}</td>
+    </tr>
+
+    <tr>
+        <th scope="row">/stb23/html/{id}</th>
+        <td>GET</td>
+        <td>Affiche le contenu complet de la spécification dont l’identifiant est {id}
+            en format HTML.</td>
+    </tr>
+
+
+    <tr>
+        <th scope="row">stb23/insert</th>
+        <td>PUT</td>
+        <td>Transmis Flux XML décrivant la STB à ajouter, conformément au schéma XSD.</td>
+    </tr>
+
+    <tr>
+        <th scope="row">/stb23/delete/{id}</th>
+        <td>DELETE</td>
+        <td>Suppression de la STB dont l’identifiant est {id}, Retour Flux XML</td>
+    </tr>
+    </tbody>
+</table>
+  <footer>
+    <p>&copy; 2023 Elpix - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
