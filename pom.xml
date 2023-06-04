@@ -137,14 +137,15 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		        <plugin>
-			      <groupId>com.clever-cloud</groupId>
-			      <artifactId>clever-cloud-maven-plugin</artifactId>
+			      <groupId>org.apache.maven.plugins</groupId>
+			      <artifactId>maven-deploy-plugin</artifactId>
 			      <configuration>
-				<deployGoals>
-	    				<goal>clever-cloud:deploy</goal>
-	 			</deployGoals>
+				<!-- Configure the deployment goal -->
+				<goals>
+				  <goal>deploy</goal>
+				</goals>
 			      </configuration>
-		        </plugin>
+    			</plugin>
 		 </plugins>
 	</build>
 
